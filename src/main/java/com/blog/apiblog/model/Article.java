@@ -1,4 +1,4 @@
-package com.blog.Api_Blog.model;
+package com.blog.api_Blog.model;
 
 
 import jakarta.persistence.*;
@@ -7,23 +7,24 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Comment {
-
+public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String title;
     @Column(columnDefinition = "TEXT")
     private String content;
 
-    private LocalDateTime createdAt;
+    private LocalDateTime publishedAt;
 
-    @ManyToOne
-    @JoinColumn(name = "article_id")
-    private Article article;
+    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Comment> comments = new ArrayList<>();
 }

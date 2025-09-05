@@ -1,4 +1,4 @@
-package com.blog.Api_Blog.controller;
+package com.blog.apiblog.controller;
 
 
 import com.blog.Api_Blog.DTO.request.ArticleRequestDTO;

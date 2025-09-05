@@ -1,4 +1,4 @@
-package com.blog.Api_Blog.DTO.request;
+package com.blog.api_Blog.DTO.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;

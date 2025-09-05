@@ -1,4 +1,4 @@
-package com.blog.Api_Blog;
+package com.blog.apiblog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
